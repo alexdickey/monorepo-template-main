@@ -1,4 +1,4 @@
-import abc import ABC, abstractMethod
+from abc import ABC, abstractmethod
 
 """
  Sample modified from CS5500, Mike Shah
@@ -9,11 +9,11 @@ import abc import ABC, abstractMethod
 """
 
 class Shape(ABC):
-    @abstractMethod
+    @abstractmethod
     def area(self):
         pass
 
-    @abstractMethod
+    @abstractmethod
     def set_values(self):
         pass
 
@@ -30,12 +30,12 @@ class Rectangle(Shape):
         return (self._width, self._height)
 
     def area(self):
-        return self.width * self.height
+        return self._width * self._height
 
 
 if __name__ == "__main__":
     # Create a rectangle object
-    rect = Rectangle()
+    rect = Rectangle(5, 8)
 
     # Call a member function
     rect.set_values(3, 4)
