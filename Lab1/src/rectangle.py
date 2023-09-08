@@ -6,6 +6,10 @@
  so a default one will be created for us.
 """
 class Rectangle:
+    def __init__(self, width, height):
+        self._width = width
+        self._height = height
+
     def set_values(self, x, y):
         self.width = x
         self.height = y
