@@ -1,13 +1,12 @@
 # TODO Please edit the following information in your assignment
 
-- Name:
-- How many hours did it take you to complete this assignment?
-- Did you collaborate with any other students/TAs/Professors?
+- Name: Alex Dickey
+- How many hours did it take you to complete this assignment? This assignment took me around 7 hours to complete
+- Did you collaborate with any other students/TAs/Professors? I did not. 
 - Did you use any external resources? (Cite them below)
-  - tbd
-  - tbd
-- (Optional) What was your favorite part of the assignment?
-- (Optional) How would you improve the assignment?
+  - N/A
+- (Optional) What was your favorite part of the assignment? The linkedin tutorials were concise and filled with examples. 
+- (Optional) How would you improve the assignment? It served its purpose well. Nothing
 
 # Implementation Logistics
 
