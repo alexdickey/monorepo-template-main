@@ -1,0 +1,4 @@
+- Created dist
+- created jsonapi and tests in a2/part1
+- completed exercises.md in lab2
+- updated gitignore in lab2
