@@ -39,3 +39,6 @@ $RECYCLE.BIN/
 
 # Built Visual Studio Code Extensions
 *.vsix
+
+src/jsonapi.egg-info/
+dist/
