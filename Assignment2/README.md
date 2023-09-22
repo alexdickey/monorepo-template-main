@@ -2,12 +2,15 @@
 
 - Name:
 - How many hours did it take you to complete this assignment?
+-   This assignment took me around 4 hours to complete.
 - Did you collaborate with any other students/TAs/Professors?
+-   No
 - Did you use any external resources? (Cite them below)
-  - tbd
-  - tbd
+  - Only the resources provided
 - (Optional) What was your favorite part of the assignment?
+  - It was good exposure to working with API's
 - (Optional) How would you improve the assignment?
+  - Much more instruction and clarity on what is required from us as well as how to actually do it
 
 # Implementation Logistics
 
