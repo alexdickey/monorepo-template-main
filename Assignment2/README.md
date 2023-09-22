@@ -1,6 +1,6 @@
 # TODO Please edit the following information in your assignment
 
-- Name:
+- Name: Alex Dickey
 - How many hours did it take you to complete this assignment?
 -   This assignment took me around 4 hours to complete.
 - Did you collaborate with any other students/TAs/Professors?
