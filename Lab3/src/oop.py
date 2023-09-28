@@ -55,11 +55,6 @@ def main():
     print(f"image2: {image2.getWidth()}, {image2.getHeight()}")
     print(f"image2 red color at (0, 0): {image2.getPixelColorR(0, 0)}")
 
-    # t = MObject
-    # print(t)
-    # print(f"{dir(t)}")
-
-
 
 if __name__ == "__main__":
     main()

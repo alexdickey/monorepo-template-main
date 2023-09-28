@@ -16,7 +16,7 @@ class Logger:
 
 def main():
     # Logger should only be initialized one time if it is properly
-    # refactored as a singleton class
+    # refactored as a singleton class.
     for i in range(3):
         logger = Logger()
         logger.add_message(f"Adding message number: {i}")
