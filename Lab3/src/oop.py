@@ -2,8 +2,9 @@ import random
 
 
 class MObject:
-    def __init__(self):
-        pass
+    # def __init__(self):
+    #     pass
+    pass
 
 
 class Image:
@@ -24,7 +25,6 @@ class Image:
 
     def getHeight(self):
         return self.m_height
-
 
     def getPixelColorR(self, x, y):
         return self.m_Pixels[self.m_width * self.m_colorChannels * y + x]
@@ -54,6 +54,11 @@ def main():
     print(f"image1 red color at (0, 0): {image1.getPixelColorR(0, 0)}")
     print(f"image2: {image2.getWidth()}, {image2.getHeight()}")
     print(f"image2 red color at (0, 0): {image2.getPixelColorR(0, 0)}")
+
+    # t = MObject
+    # print(t)
+    # print(f"{dir(t)}")
+
 
 
 if __name__ == "__main__":
