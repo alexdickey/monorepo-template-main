@@ -1,13 +1,16 @@
 # TODO Please edit the following information in your assignment
 
-- Name:
+- Name: Alex Dickey
 - How many hours did it take you to complete this assignment?
+  This assignment probably took me 6+ hours to complete. This was broken up into understanding the questions, and doing it a couple of different ways, attempting to complete all of the required components
 - Did you collaborate with any other students/TAs/Professors?
+  No
 - Did you use any external resources? (Cite them below)
-  - tbd
-  - tbd
+  - I referenced the lecture slideds on Design Patterns
 - (Optional) What was your favorite part of the assignment?
+  I like that the Kata was based on World of Warcraft
 - (Optional) How would you improve the assignment?
+  Provide more demo code/live code on related refactoring to give an idea of how it works in Python
 
 # Implementation Logistics
 

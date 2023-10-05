@@ -11,71 +11,129 @@ class Item:
     def __repr__(self):
         return "%s, %s, %s" % (self.name, self.sell_in, self.quality)
 
+class legendary_item(Item):
+    def __init__(self, name, sell_in, quality):
+        Item.__init__(self, name, sell_in, quality)
+        self.min_quality = 80
+        self.max_quality = 80
+
+    def update_quality(self):
+        pass
+
+    def get_item_sell_in(self):
+        return self.sell_in
+    
+    def get_item_quality(self):
+        return self.quality
+
+class cheese_item(Item):
+    def __init__(self, name, sell_in, quality):
+        Item.__init__(self, name, sell_in, quality)
+        self.min_quality = 0
+        self.max_quality = 50
+
+    def update_quality(self):
+        if (self.quality < self.max_quality):
+            self.quality += 1
+            if (self.sell_in < 0):
+                self.quality += 1
+        self.sell_in -= 1
+
+    def get_item_sell_in(self):
+        return self.sell_in
+    
+    def get_item_quality(self):
+        return self.quality
+
+class concert_ticket_item(Item):
+    def __init__(self, name, sell_in, quality):
+        Item.__init__(self, name, sell_in, quality)
+        self.min_quality = 0
+        self.max_quality = 50
+
+    def update_quality(self):
+        # Handle keeping the value within max quality
+        if (5 < self.sell_in <= 10):
+            self.quality += 2
+        elif (0 < self.sell_in <= 5):
+            self.quality += 3
+        elif (self.sell_in <= 0):
+            self.quality = 0
+        else:
+            self.quality = self.quality + 1
+
+        if (self.quality > self.max_quality):
+            self.quality = self.max_quality
+        
+        self.sell_in = self.sell_in - 1
+
+    def get_item_sell_in(self):
+        return self.sell_in
+
+    def get_item_quality(self):
+        return self.quality
+
+class conjured_item(Item):
+    def __init__(self, name, sell_in, quality):
+        Item.__init__(self, name, sell_in, quality)
+        self.min_quality = 0
+        self.max_quality = 50
+
+    def update_quality(self):
+        # handle keeping the value above min quality
+        if (self.sell_in < 0):
+            self.quality -= 2
+        self.quality -= 2
+        self.sell_in -= 1
+
+    def get_item_sell_in(self):
+        return self.sell_in
+    
+    def get_item_quality(self):
+        return self.quality
+
+class default_item(Item):
+    def __init__(self, name, sell_in, quality):
+        Item.__init__(self, name, sell_in, quality)
+        self.min_quality = 0
+        self.max_quality = 50
+
+    def update_quality(self):
+        # handle keeping the value above min quality
+        if (self.sell_in < 0):
+            self.quality -= 1
+        self.quality -= 1
+        self.sell_in -= 1
+
+    def get_item_sell_in(self):
+        return self.sell_in
+    
+    def get_item_quality(self):
+        return self.quality
+
 
 class GildedRose(object):
 
-    def __init__(self, items: list[Item], max_quality=50, min_quality=0, legendary_quality=80):
+    def __init__(self, items: list[Item]):
         # DO NOT CHANGE THIS ATTRIBUTE!!!
         self.items = items
-        self.max_quality = max_quality
-        self.min_quality = min_quality
-        self.legendary_quality = legendary_quality
-
-    # You want to handle everything on a unique basis - lots of if statements in one method
-    # So lets make many methods
-    # update_sulfuras:
-    # update_aged_brie:
-    # update_concert_tix:
-    # update_ conjured: 
-    # update_default:
-
-    def update_sulfuras(self, item):
-        pass
-
-    def update_aged_brie(self, item):
-        if (item.quality < self.max_quality):
-            item.quality += 1
-            if (item.sell_in < 0):
-                item.quality += 1
-        item.sell_in -= 1
-
-    def update_concert_tix(self, item):
-        # Handle keeping the value within max quality
-        if (item.quality < self.max_quality):
-            item.quality += 1
-            if (item.sell_in <= 10):
-                item.quality += 1
-            if (item.sell_in <= 5):
-                item.quality += 1
-        if (item.sell_in <= 0):
-            item.quality = 0
-        item.sell_in -= 1
     
-    def update_conjured(self, item):
-        # handle keeping the value above min quality
-        if (item.sell_in < 0):
-            item.quality -= 2
-        item.quality -= 2
-        item.sell_in -= 1
-    
-    def update_default(self, item):
-        # handle keeping the value above min quality
-
-        if (item.sell_in < 0):
-            item.quality -= 1
-        item.quality -= 1
-        item.sell_in -= 1
-
+        self.my_classes = {
+            "Sulfuras, Hand of Ragnaros":legendary_item,
+            "Aged Brie":cheese_item,
+            "Backstage passes to a TAFKAL80ETC concert":concert_ticket_item,
+            "Conjured Mana Cake":conjured_item,
+            "Default":default_item
+        }
         
     def update_quality(self):
-        for item in self.items:
-            if item.name == "Aged Brie":
-                self.update_aged_brie(item)
-            elif item.name == "Sulfuras, Hand of Ragnaros":
-                self.update_sulfuras(item)
-            elif item.name == "Backstage passes to a TAFKAL80ETC concert":
-                self.update_concert_tix(item)   
-            elif item.name == "Conjured Mana Cake":
-                self.update_conjured(item)
+        for item in (self.items):
+            if (item.name in self.my_classes):
+                item_class = self.my_classes[item.name]
+                instance = item_class(item.name, item.sell_in, item.quality)
             else:
-                self.update_default(item)
+                item_class = self.my_classes["Default"]
+                instance = item_class(item.name, item.sell_in, item.quality)
+            instance.update_quality()
+            item.quality = instance.quality
+            item.sell_in = instance.sell_in
