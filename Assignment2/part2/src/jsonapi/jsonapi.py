@@ -31,20 +31,6 @@ class ExtendedDecoder(json.JSONDecoder):
         else:
             return decoder(obj)
 
-class MyEncoder(ExtendedEncoder):
-    def encode_complex(self, c):
-        return {"real": c.real, "imag": c.imag}
-    
-    def encode_range(self, r):
-        return {"start": r.start, "stop": r.stop, "step": r.step}
-
-class MyDecoder(ExtendedDecoder):
-    def decode_complex(self, obj):
-        return complex(obj["real"], obj["imag"])
-    
-    def decode_range(self, obj):
-        return range(obj["start"], obj["start"], obj["step"])
-
 def dumps(*args, **kwargs):
     result = json.dumps(*args, **kwargs)
     return result

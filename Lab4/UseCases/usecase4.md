@@ -3,34 +3,37 @@
 <hr>
 
 # Use Case 4
+# When the mouse is pressed and a user left-clicks (i.e. on the pressed event, not released) a pixel color will change wherever the mouse is located. This should allow me to drag and draw over the canvas like a pencil on a piece of paper.
 
 <hr>
 
-**Use Case**: *use-case-title*
+**Use Case**: Drawing on the Canvas
 
-**Primary Actor**: *primary-actor*
+**Primary Actor**: User
 
-**Goal in Context**: *the aim of the primary-actor in a particular circumstance*
+**Goal in Context**: To allow the user to change the color of the pixel on the screen where they are selecting with their mouse
 
-**Preconditions**: *conditions that must be true before the scenario may play out*
+**Preconditions**: The system must be responsinve and running and the user must have a working mouse. 
 
-**Trigger**: *an action or actions that initiate the scenario*
+**Trigger**: The user left clicks with their mouse within the canvas window in the drawable area. 
   
-**Scenario**: *an enumerated list of steps describing the actions and interactions of the primary actor with the system*
+**Scenario 1**: By pressing the left click, but not dragging, a single pixel will be drawn
+
+**Scenario 2**: By pressing the left click, and dragging along the screen, a series of pixels will be drawn, tracing the path that the mouse has been moved while being held down. 
  
-**Exceptions**: *errors or faults that may occur during the scenario. Should include remedy/corrective action taken by the primary actor*
+**Exceptions**: The program may be unresponsive.
 
-**Priority**: *relative importance of this use case compared to other use cases*
+**Priority**: High-priority
 
-**When available**: *the targeted release that covers this use case*
+**When available**: First release
 
-**Channel to actor**: *the means through which the primary actor and the system communicate*
+**Channel to actor**: The user would communicate to the system through their mouse. They would initiate the communication by left-clicking, indicating that they would like to begin their 'drawing' and this drawing should continue as they drag their mouse until the mouse is released
 
-**Secondary Actor**: *any other actors – people or systems – that may be involved in the scenario*
+**Secondary Actor**: N/A
 
-**Channels to Secondary Actors**: *the means through which any secondary actors may interact with the system or other actors*
+**Channels to Secondary Actors**: N/A
 
-**Open Issues**: *notes, concerns, or other materials*
+**Open Issues**: We would have to handle the case in which the user continues to draw off of the screen and comes back, should the drawing persist or stop? what if they resize the screen, should the proportions of the drawings change?
 
 <hr>
 

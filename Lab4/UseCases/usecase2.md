@@ -3,34 +3,43 @@
 <hr>
 
 # Use Case 2
+# Pressing the number keys 1 through 8 allows you to draw in a different color.
+# 1 = Black
+# 2 = White
+# 3 = Red
+# 4 = Green
+# 5 = Blue
+# 6 = Yellow
+# 7 = Magenta
+# 8 = Cyan
 
 <hr>
 
-**Use Case**: *use-case-title*
+**Use Case**: Color Selection
 
-**Primary Actor**: *primary-actor*
+**Primary Actor**: User
 
-**Goal in Context**: *the aim of the primary-actor in a particular circumstance*
+**Goal in Context**: To change the color in which the user is able to draw in 
 
-**Preconditions**: *conditions that must be true before the scenario may play out*
+**Preconditions**: The program must be running and in a responsive state, additionally the user must have the ability to select numbers on their keyboard
 
-**Trigger**: *an action or actions that initiate the scenario*
+**Trigger**: Selecting a number key (1-8) on the keyboard
   
-**Scenario**: *an enumerated list of steps describing the actions and interactions of the primary actor with the system*
+**Scenario**: A user will select a number key (1-8) that will coorespond to a different color (Black, White, Red, Green, Blue, Yellow, Magenta, Cyan). In response to this, the color in which the user will be able to draw in will change
  
-**Exceptions**: *errors or faults that may occur during the scenario. Should include remedy/corrective action taken by the primary actor*
+**Exceptions**: If the user does not have a working keyboard, perhaps there should be an alternate option/color selector feature. 
 
-**Priority**: *relative importance of this use case compared to other use cases*
+**Priority**: Medium-Priority
 
-**When available**: *the targeted release that covers this use case*
+**When available**: First release
 
-**Channel to actor**: *the means through which the primary actor and the system communicate*
+**Channel to actor**: The primary actor communicates through I/O devices. This includes the keyboard. The system is responsible for maintaining focus of the window when the user selects their keyboard, and should be responsible for changing the drawing color within 1 second of any keyboard event. The user is responsible for all other input. 
 
-**Secondary Actor**: *any other actors – people or systems – that may be involved in the scenario*
+**Secondary Actor**: N/A
 
-**Channels to Secondary Actors**: *the means through which any secondary actors may interact with the system or other actors*
+**Channels to Secondary Actors**: N/A
 
-**Open Issues**: *notes, concerns, or other materials*
+**Open Issues**: An additional method to changing color may need to be implemented in the future, such as a drop down selector that can be navigated without the need of a functioning keyboard
 
 <hr>
 

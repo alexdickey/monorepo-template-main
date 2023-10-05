@@ -3,34 +3,37 @@
 <hr>
 
 # Use Case 3
+# Pressing the space key will clear the entire canvas.
+# This means all pixels will be removed, and the entire canvas will be a solid color with the last color you have selected.
+# (In other words, this fills the entire canvas with the last selected color)
 
 <hr>
 
-**Use Case**: *use-case-title*
+**Use Case**: Canvas Clear and Recolor
 
-**Primary Actor**: *primary-actor*
+**Primary Actor**: User
 
-**Goal in Context**: *the aim of the primary-actor in a particular circumstance*
+**Goal in Context**: To clear the entire canvas and replace it with the last selected color
 
-**Preconditions**: *conditions that must be true before the scenario may play out*
+**Preconditions**: The program must be running and in a responsive state. 
 
-**Trigger**: *an action or actions that initiate the scenario*
+**Trigger**: The pressing of the space key
   
-**Scenario**: *an enumerated list of steps describing the actions and interactions of the primary actor with the system*
+**Scenario**: A user will press the space bar and the canvas will be cleared, removing all pixels, and the entire canvas will be a solid color of the last color that was selected. 
  
-**Exceptions**: *errors or faults that may occur during the scenario. Should include remedy/corrective action taken by the primary actor*
+**Exceptions**: The program may be unresponsive, in that case the program can be restarted through the OS. 
 
-**Priority**: *relative importance of this use case compared to other use cases*
+**Priority**: High-Priority
 
-**When available**: *the targeted release that covers this use case*
+**When available**: First release
 
-**Channel to actor**: *the means through which the primary actor and the system communicate*
+**Channel to actor**: The primary actor would communicate through their keyboard. The system is responsible for reacting to the selection of the spacebar within a second. Additionally, it is responsible for clearing the screen and replacing it with pixels of the last selected color
 
-**Secondary Actor**: *any other actors – people or systems – that may be involved in the scenario*
+**Secondary Actor**: N/A
 
-**Channels to Secondary Actors**: *the means through which any secondary actors may interact with the system or other actors*
+**Channels to Secondary Actors**: N/A
 
-**Open Issues**: *notes, concerns, or other materials*
+**Open Issues**: There should be a way to undo the action. The spacebar is a large button, and it may accidentally be pressed. Ensuring there is a way to undo the screen clear is essential. 
 
 <hr>
 
