@@ -1,11 +1,18 @@
 # TODO Please edit the following information in your assignment
 
 - Name: Alex Dickey
+<<<<<<< HEAD
 - How many hours did it take you to complete this assignment? Around 1.5 hours.
 - Did you collaborate with any other students/TAs/Professors? N/A
 - Did you use any external resources? (Cite them below)
   - paypal.com
   - Links from slides
+=======
+- How many hours did it take you to complete this assignment? 1.5 hours
+- Did you collaborate with any other students/TAs/Professors? N/A
+- Did you use any external resources? (Cite them below)
+  - paypal.com
+  - tbd
 - (Optional) What was your favorite part of the assignment?
 - (Optional) How would you improve the assignment?
 

@@ -3,6 +3,7 @@
 <hr>
 
 # Use Case 5
+# Pressing the escape key should terminate the program.
 
 <hr>
 

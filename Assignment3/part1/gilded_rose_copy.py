@@ -111,7 +111,6 @@ class default_item(Item):
     def get_item_quality(self):
         return self.quality
 
-
 class GildedRose(object):
 
     def __init__(self, items: list[Item]):
